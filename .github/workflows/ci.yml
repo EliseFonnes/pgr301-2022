@@ -24,9 +24,10 @@ jobs:
         run: mvn --no-transfer-progress -B compile --file pom.xml
         
       - name: Test
+          on:
+            push:
+              branches: [ '**' ]
         run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
-        on:
-          push:
         
       - name: Report
         uses: dorny/test-reporter@v1
