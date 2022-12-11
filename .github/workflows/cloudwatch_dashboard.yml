@@ -6,7 +6,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ '**' ]
+    branches: [ main ]
 
 jobs:
   terraform:
@@ -35,4 +35,5 @@ jobs:
 
       - name: Terraform Apply
         if: github.event_name == 'push'
-        run: terraform apply -var="candidate_id=$CANDIDATE_ID" -var="candidate_email=$CANDIDATE_EMAIL"  -auto-approve
+        run: terraform import aws_s3_bucket.analyticsbucket analytics-1008 || true && terraform apply -var="candidate_id=$CANDIDATE_ID" -var="candidate_email=$CANDIDATE_EMAIL"  -auto-approve
+        
