@@ -5,8 +5,7 @@ defaults:
 on:
   push:
     branches: [  ]
-
-
+    
 jobs:
   terraform:
     name: "Terraform"
