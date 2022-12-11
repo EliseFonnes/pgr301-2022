@@ -8,7 +8,7 @@ import java.util.*;
 class NaiveCartImpl implements CartService {
 
     private final Map<String, Cart> shoppingCarts = new HashMap<>();
-
+    
     @Override
     public Cart getCart(String id) {
         return shoppingCarts.get(id);
@@ -34,7 +34,7 @@ class NaiveCartImpl implements CartService {
         return new ArrayList<>(shoppingCarts.keySet());
     }
 
-    // @author Jim; I'm so proud of this one, took me one week to figure out !!!
+
     public float total() {
         return shoppingCarts.values().stream()
                 .flatMap(c -> c.getItems().stream()
