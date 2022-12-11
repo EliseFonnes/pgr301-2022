@@ -64,7 +64,7 @@ For at sensor skal kunne laste opp docker image i sitt eget ECR repo er han/hun 
 
 
 
-Del 4
+Del 5
 
 Oppgave 1.
 
