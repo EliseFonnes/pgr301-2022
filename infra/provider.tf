@@ -10,5 +10,4 @@ terraform {
     key    = "1008/exam.state"
     region = "eu-west-1"
   }
-
 }

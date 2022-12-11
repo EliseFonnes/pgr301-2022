@@ -1,5 +1,5 @@
 variable "candidate_id" {
-  default = 1008
+  default = "1008"
   type = string
 }
 
