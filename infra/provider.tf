@@ -9,7 +9,6 @@ terraform {
     bucket = "analytics-1008"
     key    = "1008/exam.state"
     region = "eu-west-1"
-    
-     migrate = true
+    force_copy = true
   }
 }
