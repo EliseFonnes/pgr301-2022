@@ -25,7 +25,7 @@ jobs:
 
       - name: Terraform Init
         id: init
-        run: terraform init -auto-approve
+        run: terraform init -backend=false
 
       - name: Terraform Plan
         if: github.event_name == 'pull_request'
